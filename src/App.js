@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import Homepage from "./components/Homepage";
 import AboutMe from "./components/AboutMe";
 import { Routes, Route, Link } from "react-router-dom";
-import ReactPlayer from "react-player/youtube";
 
 function App() {
   return (
@@ -40,7 +39,10 @@ function App() {
         <body>
           <Header />
           <Nav />
-          <Homepage />
+          <Routes>
+            <Route path="/" element={<Homepage />}></Route>
+            <Route path="/booking" element={<BookingPage />}></Route>
+          </Routes>
           <Footer />
 
           {/* <!-- Your JS files --> */}
